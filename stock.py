@@ -70,10 +70,11 @@ def stockdata(ticker,period):
 
 ticker = 'mcd'
 period = '1y'
+days = 5
 data = stockdata(ticker,period)
 XgbP ,a = xgbpriceclose(data)
 SKLinRegP, ska = SKLinReg(data)
-Sup,score,pred = XgbSupLearn(data,15)
+Sup,score,pred = XgbSupLearn(data,days)
 
 #plotting data
 XgbSupervised_data = Sup.tolist()
