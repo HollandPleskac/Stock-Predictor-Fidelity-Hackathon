@@ -70,11 +70,19 @@ def stockdata(ticker,period):
 
 ticker = 'mcd'
 period = '1y'
-days = 5
-data = stockdata(ticker,period)
-XgbP ,a = xgbpriceclose(data)
-SKLinRegP, ska = SKLinReg(data)
-Sup,score,pred = XgbSupLearn(data,days)
+def aimodels(ticker,period)
+  data = stockdata(ticker,period)
+  XGBgraph ,a = xgbpriceclose(data)
+  SKLGraph, ska = SKLinReg(data)
+  XGBSUPGraph ,score,pred = XgbSupLearn(data,15)
+  scores = [a,ska,score]
+  return XGBgraph,SKLGraph,XGBSUPGraph,scores, pred
+
+
+#plotting data
+XgbSupervised_data = Sup.tolist()
+SKlearnData = SKLinRegP.tolist()
+XgbData = XgbP.tolist()
 
 #plotting data
 XgbSupervised_data = Sup.tolist()
