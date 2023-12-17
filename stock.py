@@ -81,10 +81,11 @@ SKlearnData = SKLinRegP.tolist()
 XgbData = XgbP.tolist()
 
 
-
+'''
 #plotting block
 test = data.iloc[int(.90*len(data)):,:]
 plt.plot(data['Close'], label = 'close')
 plt.plot(test['Close'].index,XgbP)
 plt.plot(test['Close'].index,SKLinRegP)
 plt.plot(test['Close'].index,Sup)
+'''
