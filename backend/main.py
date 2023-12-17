@@ -4,8 +4,18 @@ from sklearn.linear_model import LinearRegression
 import xgboost as ai
 import pandas as pd
 from typing import Union
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+# Set up CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
 
 def SKLinReg(data):
 
