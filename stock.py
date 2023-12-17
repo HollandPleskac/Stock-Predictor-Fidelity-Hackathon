@@ -77,26 +77,12 @@ def aimodels(ticker,period,days):
   SKLGraph, ska = SKLinReg(data)
   XGBSUPGraph ,score,pred = XgbSupLearn(data,days)
   scores = [a,ska,score]
+  XGBgraph =XGBgraph.tolist()
+  SKLGraph=SKLGraph.tolist()
+  XGBSUPGraph.tolist()
   return XGBgraph,SKLGraph,XGBSUPGraph,scores, pred
 
 
-#plotting data
-XgbSupervised_data = Sup.tolist()
-SKlearnData = SKLinRegP.tolist()
-XgbData = XgbP.tolist()
-
-
-
-
-#plotting data
-XgbSupervised_data = Sup.tolist()
-SKlearnData = SKLinRegP.tolist()
-XgbData = XgbP.tolist()
-
-#plotting data
-XgbSupervised_data = Sup.tolist()
-SKlearnData = SKLinRegP.tolist()
-XgbData = XgbP.tolist()
 
 
 '''
